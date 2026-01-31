@@ -1,0 +1,174 @@
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html,body { height: 100%; }
+
+  @font-face {
+    font-family: 'Win98Bitmap';
+    src: url('ms_sans_serif.woff2') format('woff2'),
+         url('ms_sans_serif.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  body {
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Win98Bitmap', 'MS Sans Serif', Tahoma, Verdana, sans-serif;
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    cursor: url("win98.cur"), auto;
+  }
+
+  .icon, .btn, .start-button, input[type="text"], textarea {
+    cursor: url("win98.cur"), auto;
+  }
+
+  .taskbar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 40px;
+    background: linear-gradient(#c0c0c0, #8f8f8f);
+    border-top: 2px solid #fff;
+    display: flex; align-items: center;
+    padding: 4px; gap: 8px;
+    z-index: 1000;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  .start-button {
+    display: flex; align-items: center; gap: 8px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    padding: 4px 8px;
+    font-weight: bold;
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+  }
+  .start-button:active {
+    border: 2px solid #808080;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+  }
+
+  .btn {
+    display:inline-block;
+    padding:2px 6px;
+    border:2px solid #fff;
+    border-right-color:#808080;
+    border-bottom-color:#808080;
+    background:#c0c0c0;
+    font-size:12px;
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+    cursor: url("win98.cur"), auto;
+    text-align:left;
+  }
+  .btn:active {
+    border:2px solid #808080;
+    border-right-color:#fff;
+    border-bottom-color:#fff;
+    box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+  }
+
+  .start-menu {
+    position: fixed;
+    left: 8px; bottom: 48px;
+    width: 220px;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .start-menu-section {
+    padding:8px;
+    border-top:1px solid #cfcfcf;
+    font-size:12px;
+    color:#000;
+  }
+
+  .center-row-wrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 760px;
+    max-width: calc(100% - 40px);
+    display: flex; justify-content: center; align-items: center;
+  }
+
+  .win-window {
+    width: 100%;
+    background: linear-gradient(#cfcfcf,#bdbdbd);
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.6);
+    padding: 8px;
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: 14px;
+  }
+
+  .titlebar {
+    height: 28px;
+    background: linear-gradient(#00008b,#00004d);
+    color: #fff;
+    display:flex; align-items:center;
+    padding: 0 8px;
+    font-weight: bold;
+  }
+
+  .win-content {
+    background: linear-gradient(#fff,#e6e6e6);
+    border: 2px solid #fff;
+    padding: 12px;
+    display:flex; justify-content: center; align-items: center;
+    min-height: 120px;
+  }
+
+  .icon-row {
+    display:flex; gap: 28px;
+    align-items:center; justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .icon {
+    width: 96px; text-align:center; user-select: none;
+  }
+  .icon img {
+    width: 64px; height: 64px;
+    display:block; margin: 0 auto 6px;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    background: #cfcfcf;
+    image-rendering: pixelated;
+  }
+  .icon .label {
+    background: linear-gradient(#fff,#e6e6e6);
+    border: 2px solid #fff;
+    padding: 4px;
+    font-size: 13px;
+    color: #000;
+  }
+
+  .app-window {
+    position: fixed;
+    width: 560px; max-width: calc(100% - 40px);
+    height: 360px; max-height: calc(100% - 80px);
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(#cfcfcf,#bdbdbd);
+    border: 2px solid #000;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.6);
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+  }
+  .app-window .content {
+    background: #fff;
+    padding: 12px;
+    overflow:auto;
+    flex: 1;
+  }
