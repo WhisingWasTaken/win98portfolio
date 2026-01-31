@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Hack Club](https://img.shields.io/badge/Hack_Club-%23EC3750.svg?style=flat&logo=Hack-Club&logoColor=white)](https://hackclub.com/)
-![Portfolio](https://img.shields.io/badge/portfolio-blue)
+![Portfolio](https://img.shields.io/badge/Personal-Portfolio-blue)
 ![Netlify](https://img.shields.io/badge/deployed%20on-Netlify-00C7B7)
 
 This is a personal portfolio site styled after Windows 98.  
