@@ -27,5 +27,5 @@ Clone the repository and open `index.html` in your browser.
 
 ```bash
 git clone https://github.com/WhisingWasTaken/win98portfolio.git
-cd win98-portfolio
+cd win98portfolio
 open index.html
