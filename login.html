@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chartset="UTF-8">
+    <title>Login - Whising's Portfolio</title>
+    <link rel="stylesheet" href="./scripts/css/login.css">
+</head>
+<body>
+    <div class="login-window">
+        <div class="title-bar">
+            <span>Windows Login</span>
+            <button onclick="window.close()">X</button>
+        </div>
+        <div class="content">
+            <div class="logo">
+                <img src="win98logo.png" alt="Windows 98 Logo">
+            </div>
+            <form onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="admin">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" value="admin" readonly>
+
+            <div class="buttons">
+             <button type="submit">OK</button>
+             <button type="button" onclick="cancelLogin()">Cancel</button>
+            </div>
+            </form>
+    </div>
+</div>
+<script src="./scripts/login.js"></script>
+</body>
+</html>
