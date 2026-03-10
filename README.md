@@ -10,6 +10,8 @@ Browser-based retro emulator. Drop a ROM and play. No installs, no accounts, no 
 
 **Live Demo:** [your-site.netlify.app](https://your-site.netlify.app)
 
+## IMPORTANT: If you just want to try the emulator, open NES, and add "https://raw.githubusercontent.com/retrobrews/nes-games/master/flappybird.nes" to the URL, this is flappybird :)
+
 ## Features
 
 - 6 systems: NES, SNES, Game Boy / GBC / GBA, Game & Watch, Genesis / Mega Drive, Game Gear
