@@ -3,7 +3,7 @@
 [![Hack Club](https://img.shields.io/badge/Hack_Club-%23EC3750.svg?style=flat&logo=Hack-Club&logoColor=white)](https://hackclub.com/)
 ![Portfolio](https://img.shields.io/badge/Personal-Portfolio-blue)
 ![Netlify](https://img.shields.io/badge/deployed%20on-Netlify-00C7B7)
-This is a personal portfolio site styled after Windows 98.<br>
+<br>This is a personal portfolio site styled after Windows 98.<br>
 It recreates the classic desktop look with a taskbar, Start menu, icons, and draggable windows.<br>
 I was procrastinating this project for a while, so I am very happy this turned out the way it did.
 <br>![Preview](https://img.shields.io/badge/preview-live-success)
