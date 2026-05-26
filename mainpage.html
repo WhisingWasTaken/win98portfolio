@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Whising — Portfolio</title>
+<link rel="stylesheet" href="https://unpkg.com/98.css"/>
+<link rel="stylesheet" href="./scripts/css/mainpage.css">
+</head>
+<body>
+
+<div id="shell">
+
+  <div id="desktop" onclick="deselectAll();closeStartMenu()">
+
+    <div id="desktop-icons">
+
+      <div class="desk-icon" id="icon-explorer" ondblclick="openApp('explorer')" onclick="selectIcon('icon-explorer',event)">
+        <div class="desk-icon-img">
+          <img src="icons/portfolio.png" alt="File Explorer">
+        </div>
+        <div class="desk-icon-label">My Computer</div>
+      </div>
+
+      <div class="desk-icon" id="icon-about" ondblclick="openApp('about')" onclick="selectIcon('icon-about',event)">
+        <div class="desk-icon-img">
+          <img src="icons/msagent-3.png" alt="About Me">
+        </div>
+        <div class="desk-icon-label">About Me</div>
+      </div>
+
+      <div class="desk-icon" id="icon-contact" ondblclick="openApp('contact')" onclick="selectIcon('icon-contact',event)">
+        <div class="desk-icon-img">
+          <img src="./icons/globe_map-0.png" alt="Contact">
+        </div>
+        <div class="desk-icon-label">Contact Me</div>
+      </div>
+
+      <div class="desk-icon" id="icon-gallery" ondblclick="openApp('gallery')" onclick="selectIcon('icon-gallery',event)">
+        <div class="desk-icon-img">
+          <img src="./icons/movie_maker-5.png" alt="Gallery">
+        </div>
+        <div class="desk-icon-label">Gallery</div>
+      </div>
+
+      <div class="desk-icon" id="icon-hackclub" ondblclick="openApp('hackclub')" onclick="selectIcon('icon-hackclub',event)">
+        <div class="desk-icon-img">
+          <img src="icons/hackclub.png" alt="HackClub">
+        </div>
+        <div class="desk-icon-label">HackClub</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="taskbar" role="toolbar" aria-label="Taskbar">
+
+    <div class="start-button" id="startBtn" onclick="toggleStartMenu(event)" aria-haspopup="true" aria-expanded="false">
+      <img src="icons/start.png" alt="Start" style="width:20px;height:20px;image-rendering:pixelated;">
+      <span>Start</span>
+    </div>
+
+    <div id="taskItems"></div>
+
+    <div style="margin-left:auto; display:flex; align-items:center; gap:12px; padding-right:4px;">
+      <div id="clock">00:00</div>
+    </div>
+
+  </div>
+
+  <div class="start-menu" id="startMenu">
+    <div class="start-menu-stripe"><span>Whising98</span></div>
+    <div class="start-menu-items">
+      <div class="sm-item" onclick="openApp('about');closeStartMenu()">
+        <span style="font-size:16px;"> About Me</span>
+      </div>
+      <div class="sm-item" onclick="openApp('explorer');closeStartMenu()">
+        <span style="font-size:16px;">File Explorer</span>
+      </div>
+      <div class="sm-item" onclick="openApp('contact');closeStartMenu()">
+        <span style="font-size:16px;">Contact Me</span>
+      </div>
+      <div class="sm-item" onclick="openApp('hackclub');closeStartMenu()">
+        <span style="font-size:16px;">HackClub</span>
+      </div>
+      <div class="sm-item" onclick="openApp('gallery');closeStartMenu()">
+        <span style="font-size:16px;">Gallery</span> 
+      </div>
+      <div class="sm-separator"></div>
+      <div class="start-menu-section">
+        <button class="btn" onclick="location.reload()">Restart</button>
+        <button class="btn" onclick="closeStartMenu()">Shut Down…</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="./scripts/mainpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Win98Bitmap';
+  src: url('ms_sans_serif.woff2') format('woff2'),
+       url('ms_sans_serif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: #008080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Win98Bitmap', sans-serif;
+}
+
+.window {
+  background: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
+  width: 400px;
+  padding: 10px;
+}
+
+.title-bar {
+  background: #000080;
+  color: #fff;
+  padding: 2px 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Win98Bitmap', sans-serif;
+}
+
+.title-bar button {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.content {
+  background: #c0c0c0;
+  padding: 15px;
+  border: 2px solid #808080;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
+  text-align: center;
+  font-family: 'Win98Bitmap', sans-serif;
+}
+
+.btn {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  padding: 4px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: 'Win98Bitmap', sans-serif;
+}
+
+.btn:active {
+  border: 2px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}

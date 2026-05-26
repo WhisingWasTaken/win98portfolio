@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="./scripts/css/gallery.css">
+<title>Gallery</title>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button class="btn" onclick="prevPhoto()">&#9664; Prev</button>
+    <button class="btn" onclick="nextPhoto()">Next &#9654;</button>
+    <div class="tb-sep"></div>
+    <button class="btn" id="btn-slide" onclick="toggleSlideshow()">Slideshow</button>
+  </div>
+
+  <div class="main">
+    <div class="thumb-strip" id="thumb-strip">
+    </div>
+
+    <div class="viewer">
+      <div class="nav-arrow left"  onclick="prevPhoto()">&#9664;</div>
+      <div class="nav-arrow right" onclick="nextPhoto()">&#9654;</div>
+      <div class="viewer-placeholder" id="viewer-placeholder" style="display: none;">No photos loaded.</div>
+      <img id="viewer-img" src="" alt="">
+    </div>
+
+    <div class="info-panel">
+      <div class="panel">
+        <h2>File</h2>
+        <div class="info-row">Name<span id="info-name">—</span></div>
+        <div class="info-row">Type<span id="info-type">—</span></div>
+        <div class="info-row">Size<span id="info-size">—</span></div>
+      </div>
+      <div class="panel">
+        <h2>View</h2>
+        <div class="info-row">Item<span id="info-index">—</span></div>
+        <div class="info-row">Total<span id="info-total">0</span></div>
+      </div>
+      <div class="panel">
+        <h2>Slideshow</h2>
+        <div class="info-row">Status<span id="info-slide">Off</span></div>
+        <div class="info-row">Delay<span>3 sec</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <div class="status-pane" id="status-file">No file selected</div>
+    <div class="status-pane" id="status-count">0 photos</div>
+  </div>
+
+<script src="./scripts/gallery.js"></script>
+</body>
+</html>

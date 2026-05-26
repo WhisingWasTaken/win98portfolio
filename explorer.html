@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="./scripts/css/explorer.css">
+<title>File Explorer</title>
+</head>
+<body>
+
+<div id="explorer">
+
+  <div class="addressbar">
+    <label>Address</label>
+    <input type="text" id="addr-input" value="C:\WINDOWS" readonly>
+  </div>
+
+  <div class="split">
+
+    <div class="tree-pane" id="tree-pane">
+
+      <div class="tree-node indent-1" onclick="toggleNode('node-desktop', event)" ondblclick="navigate('Desktop', 'C:\\Desktop')">
+        <div class="tree-toggle" id="toggle-node-desktop">+</div>
+        <div class="tree-icon"><img src="./icons/portfolio.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+        Desktop
+      </div>
+      <div class="tree-children" id="node-desktop">
+
+        <div class="tree-node indent-2 selected" id="node-mycomputer" onclick="toggleNode('node-mycomputer-ch', event); selectNode(this); navigate('My Computer', 'My Computer')">
+          <div class="tree-toggle" id="toggle-node-mycomputer-ch">+</div>
+          <div class="tree-icon"><img src="./icons/desktop.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+          My Computer
+        </div>
+        <div class="tree-children open" id="node-mycomputer-ch">
+
+          <div class="tree-node indent-3" onclick="toggleNode('node-c', event); selectNode(this); navigate('C:\\', 'C:\\')">
+            <div class="tree-toggle" id="toggle-node-c">+</div>
+            <div class="tree-icon"><img src="./icons/drive.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+            (C:)
+          </div>
+          <div class="tree-children" id="node-c" style="padding-left:14px;">
+
+            <div class="tree-node indent-3" style="padding-left:50px;" onclick="toggleNode('node-windows', event); selectNode(this); navigate('WINDOWS', 'C:\\WINDOWS')">
+              <div class="tree-toggle" id="toggle-node-windows">+</div>
+              <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+              WINDOWS
+            </div>
+            <div class="tree-children" id="node-windows" style="padding-left:14px;">
+              <div class="tree-node" style="padding-left:64px;" onclick="selectNode(this); navigate('System32', 'C:\\WINDOWS\\System32')">
+                <div class="tree-toggle hidden">+</div>
+                <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+                System32
+              </div>
+              <div class="tree-node" style="padding-left:64px;" onclick="selectNode(this); navigate('Fonts', 'C:\\WINDOWS\\Fonts')">
+                <div class="tree-toggle hidden">+</div>
+                <div class="tree-icon"><img src="./icons/directory_fonts-1.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+                Fonts
+              </div>
+              <div class="tree-node" style="padding-left:64px;" onclick="selectNode(this); navigate('Media', 'C:\\WINDOWS\\Media')">
+                <div class="tree-toggle hidden">+</div>
+                <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+                Media
+              </div>
+            </div>
+
+            <div class="tree-node indent-3" style="padding-left:50px;" onclick="toggleNode('node-progfiles', event); selectNode(this); navigate('Program Files', 'C:\\Program Files')">
+              <div class="tree-toggle" id="toggle-node-progfiles">+</div>
+              <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+              Program Files
+            </div>
+            <div class="tree-children" id="node-progfiles" style="padding-left:14px;">
+              <div class="tree-node" style="padding-left:64px;" onclick="selectNode(this); navigate('Common Files', 'C:\\Program Files\\Common Files')">
+                <div class="tree-toggle hidden">+</div>
+                <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+                Common Files
+              </div>
+              <div class="tree-node" style="padding-left:64px;" onclick="selectNode(this); navigate('Internet Explorer', 'C:\\Program Files\\Internet Explorer')">
+                <div class="tree-toggle hidden">+</div>
+                <div class="tree-icon"><img src="./icons/directory_e_open-0.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+                Internet Explorer
+              </div>
+            </div>
+
+            <div class="tree-node indent-3" style="padding-left:50px;" onclick="selectNode(this); navigate('My Documents', 'C:\\My Documents')">
+              <div class="tree-toggle hidden">+</div>
+              <div class="tree-icon"><img src="./icons/folder.png" onerror="this.parentElement.innerHTML='&nbsp;'"></div>
+              My Documents
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="content-pane" id="content-pane">
+      <div class="file-area" id="file-area">
+        <!-- my lord js here btw -->
+      </div>
+    </div>
+
+  </div>
+
+  <div class="statusbar">
+    <div class="status-pane" id="status-count">3 object(s)</div>
+    <div class="status-pane" id="status-size">0 bytes</div>
+  </div>
+
+</div>
+
+<script src="./scripts/explorer.js"></script>
+</body>
+</html>

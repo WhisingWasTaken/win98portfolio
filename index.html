@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./scripts/css/verification.css">
+<title>Cloudflare Verification</title>
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <span>Cloudflare Verification</span>
+      <button>X</button>
+    </div>
+    <div class="content">
+      <p>Please complete the verification below:</p>
+	<div class="cf-turnstile"
+     data-sitekey="0x4AAAAAACVxzbVXwP-9U4hn"
+     data-callback="onVerify"></div>
+    </div>
+  </div>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="./scripts/verification.js"></script>
+</body>
+</html>

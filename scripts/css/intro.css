@@ -1,0 +1,85 @@
+  @font-face {
+    font-family: 'MS Sans Serif';
+    src: url('ms_sans_serif.woff2') format('woff2');
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+    font-family: 'MS Sans Serif', sans-serif;
+    cursor: url('win98.cur'), auto;
+  }
+
+  #startMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    background: #000080;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
+    text-align: center;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; 
+  }
+
+  .skip-popup {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #808080;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: black;
+    display: none; 
+  }
+
+  .skip-popup::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #808080;
+    margin-bottom: 2px;
+  }
+
+  .power-button {
+    position: absolute;
+    bottom: 40px; 
+    right: 5px;
+    width: 60px;
+    height: 25px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    line-height: 21px;
+    cursor: url('win98.cur'), auto;
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+  }
+
+  .power-button:active {
+    border: 2px solid #808080;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+  }
